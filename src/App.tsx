@@ -9,10 +9,6 @@ function App() {
 			</Button>
 			<Button onClick={() => {}}>Применить</Button>
 			<Input />
-			<div>
-				<a href="/">Меню</a>
-				<a href="/cart">Корзина</a>
-			</div>
 		</>
 	);
 }
