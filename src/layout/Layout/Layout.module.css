@@ -1,0 +1,72 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  width: 240px;
+  border-right: 1px solid var(--separator-color);
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.infoUser {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.userName {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+}
+
+.email {
+  font-weight: 400;
+  font-size: 14px;
+  color: #9ea1b1;
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.link {
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--main-text-color);
+  transition: color 0.25s;
+}
+
+.link:hover {
+  color: var(--primary-color-hover);
+}
+
+.linkInner {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.logoutButton {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 22px 9px 9px;
+  align-self: self-start;
+}
