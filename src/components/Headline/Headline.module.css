@@ -1,0 +1,7 @@
+.headline {
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 36px;
+  color: var(--main-text-color);
+  margin: 0;
+}

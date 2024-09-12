@@ -1,0 +1,24 @@
+.input {
+  padding: 16px 30px 16px 44px;
+  border-radius: 10px;
+  border: 1px solid #efefef;
+  min-width: 256px;
+  box-sizing: border-box;
+}
+
+.input:placholder {
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 14px;
+  color: #9aa0b4;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+}
