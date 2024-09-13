@@ -1,0 +1,108 @@
+.link {
+  text-decoration: none;
+}
+
+.card {
+  position: relative;
+  width: 320px;
+  border-radius: 19px;
+  box-shadow: 18px 18px 36px 0 rgba(211, 209, 216, 0.25);
+}
+
+.head {
+  min-height: 165px;
+	border-radius: 19px;
+}
+
+.cardContainer {
+  padding: 0px 13px 20px 13px;
+}
+
+.innerPrice {
+  position: absolute;
+  top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 297px;
+}
+
+.priceWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 81px;
+  height: 34px;
+  background-color: var(--background-color);
+  border-radius: 20px;
+  box-shadow: 0 7px 28px 0 rgba(254, 114, 76, 0.2);
+}
+
+.price {
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--main-text-color);
+}
+
+.price span {
+  color: var(--primary-color);
+}
+
+.btnAdd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.btnAdd:hover {
+  background: var(--primary-color-hover);
+}
+
+.rating {
+  position: absolute;
+  top: 151px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 51px;
+  height: 29px;
+  background-color: var(--background-color);
+  border-radius: 20px;
+  box-shadow: 0 6px 24px 0 rgba(254, 114, 76, 0.2);
+  box-sizing: border-box;
+}
+
+.rating span {
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+.titleCard {
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 10px;
+  color: var(--main-text-color)
+}
+
+.ingredients {
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  color: var(--secondary-text-color);
+}
