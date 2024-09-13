@@ -9,7 +9,7 @@ export function Layout() {
 			<div className={styles.sidebar}>
 				<div className={styles.infoUser}>
 					<div>
-						<img src="./avatar.jpg" alt="Аватар пользователя" />
+						<img src="/avatar.jpg" alt="Аватар пользователя" />
 					</div>
 					<div className={styles.info}>
 						<p className={styles.userName}>Антон Ларичев</p>
@@ -18,7 +18,7 @@ export function Layout() {
 				</div>
 				<div className={styles.links}>
 					<div className={styles.linkInner}>
-						<img src="./menuicon.svg" alt="Иконка меню" />
+						<img src="/menuicon.svg" alt="Иконка меню" />
 						<NavLink
 							className={({ isActive }) =>
 								cn(styles.link, { [styles.active]: isActive })
@@ -29,7 +29,7 @@ export function Layout() {
 						</NavLink>
 					</div>
 					<div className={styles.linkInner}>
-						<img src="./carticon.svg" alt="Иконка корзины" />
+						<img src="/carticon.svg" alt="Иконка корзины" />
 						<NavLink className={({ isActive }) =>
 							cn(styles.link, { [styles.active]: isActive })
 						} to="/cart">
@@ -38,7 +38,7 @@ export function Layout() {
 					</div>
 				</div>
 				<Button type="button" className={styles.logoutButton} apperance="small">
-					<img src="./logouticon.svg" alt="Иконка выхода" />
+					<img src="/logouticon.svg" alt="Иконка выхода" />
           Выйти
 				</Button>
 			</div>
