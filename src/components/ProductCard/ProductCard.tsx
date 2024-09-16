@@ -26,7 +26,7 @@ function ProductCard (props: ProductCardProps) {
 				</div>
 				<div className={styles.cardContainer}>
 					<div className={styles.description}>
-						<h3 className={styles.titleCard}>{props.title}</h3>
+						<h3 className={styles.titleCard}>{props.name}</h3>
 						<p className={styles.ingredients}>{props.description}</p>
 					</div>
 				</div>
