@@ -75,6 +75,7 @@
   width: 51px;
   height: 29px;
   background-color: var(--background-color);
+  color: var(--main-text-color);
   border-radius: 20px;
   box-shadow: 0 6px 24px 0 rgba(254, 114, 76, 0.2);
   box-sizing: border-box;
@@ -96,7 +97,7 @@
   font-size: 18px;
   margin: 0;
   margin-bottom: 10px;
-  color: var(--main-text-color)
+  color: var(--main-text-color);
 }
 
 .ingredients {
