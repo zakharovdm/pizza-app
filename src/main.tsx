@@ -26,6 +26,7 @@ const router = createBrowserRouter([
 			{
 				path: '/product/:id',
 				element: <Product />,
+				errorElement: <>Ошибка</>,
 				loader: async ({ params }) => {
 					await new Promise<void>((resolve) => {
 						setTimeout(() => {
