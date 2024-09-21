@@ -6,7 +6,7 @@ function ProductCard (props: ProductCardProps) {
 	return (
 		<Link to={`/product/${props.id}`} className={styles.link}>
 			<div className={styles.card}>
-				<div className={styles.head} style={{ backgroundImage: `url(${props.image})` }}>
+				<div className={styles.head} style={{ background: `url(${props.image}) no-repeat center/cover` }}>
 					<div className={styles.cardContainer}>
 						<div className={styles.innerPrice}>
 							<div className={styles.priceWrapper}> 
