@@ -9,6 +9,10 @@
   padding: 20px;
 }
 
+.input::placeholder {
+  color: #c4c4c4;
+}
+
 .invalid {
   border: 1px solid red;
   background: rgb(116, 58, 58);
