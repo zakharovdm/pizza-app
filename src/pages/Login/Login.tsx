@@ -3,19 +3,48 @@ import Button from '../../components/Button/Button';
 import Headline from '../../components/Headline/Headline';
 import Input from '../../components/Input/Input';
 import styles from './Login.module.css';
-import { FormEvent } from 'react';
+import { FormEvent, useState } from 'react';
+import axios, { AxiosError } from 'axios';
+import { PREFIX } from '../../helpers/API';
 
+type LoginForm = {
+	email: {
+		value: string;
+	},
+	password: {
+		value: string;
+	}
+}
 export function Login() {
-	const submit = (e: FormEvent) => {
+	const [error, setError] = useState<string | null>(); 
+	
+	const sendForm = async (email: string, password: string) => {
+		try {
+			const { data } = await axios.post(`${PREFIX}/auth/login`, {
+				email,
+				password
+			});
+			console.log(data);
+		} catch(e) {
+			if (e instanceof AxiosError) {
+				setError(e.response?.data.message);
+			}
+		}
+	};
+	const submit = async (e: FormEvent) => {
 		e.preventDefault();
-		console.log(e);
+		setError(null);
+		const target = e.target as typeof e.target & LoginForm;
+		const { email, password } = target;
+		await sendForm(email.value, password.value);
 	};
 
 	return (
 		<div className={styles.formWrapper}>
+			<Headline>Вход</Headline>
 			<form className={styles.form} onSubmit={submit}>
+				{error && <div className={styles.error}>{error}</div>}
 				<div className={styles.wrapper}>
-					<Headline>Вход</Headline>
 					<div className={styles.input}>
 						<label className={styles.label} htmlFor="email">Ваш email</label>
 						<Input type='email' name='email' id='email' placeholder='Email' />

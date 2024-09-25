@@ -3,6 +3,7 @@
 }
 
 .form {
+  margin-top: 56px;
   margin-bottom: 29px;
 }
 
@@ -44,4 +45,12 @@
 .register {
   color: var(--primary-color);
   text-decoration: none;
+}
+
+.error {
+  background-color: #ffc529;
+  color: #fff;
+  border-radius: 30px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
