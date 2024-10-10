@@ -1,0 +1,56 @@
+.formWrapper {
+  width: 324px;
+}
+
+.form {
+  margin-top: 56px;
+  margin-bottom: 29px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  margin-bottom: 74px;
+}
+
+.label {
+  color: #c4c4c4;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+} 
+
+.text {
+  margin: 0;
+  color: var(--secondary-text-color);
+}
+
+.login {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.error {
+  background-color: #ffc529;
+  color: #fff;
+  border-radius: 30px;
+  padding: 20px;
+  margin-bottom: 20px;
+}

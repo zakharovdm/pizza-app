@@ -3,7 +3,7 @@ import Button from '../../components/Button/Button';
 import Headline from '../../components/Headline/Headline';
 import Input from '../../components/Input/Input';
 import styles from './Login.module.css';
-import { FormEvent, useEffect} from 'react';
+import { FormEvent, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, userActions } from '../../store/user.slice';
 import { AppDispatch, RootState } from '../../store/store';
@@ -19,7 +19,7 @@ type LoginForm = {
 export function Login() {
 	const navigate = useNavigate();
 	const dispatch = useDispatch<AppDispatch>();
-	const { jwt, loginErrorMessage } = useSelector((s: RootState) => s.user );
+	const { jwt, loginErrorMessage } = useSelector((s: RootState) => s.user);
 
 	useEffect(() => {
 		if (jwt) {
@@ -42,7 +42,9 @@ export function Login() {
 		<div className={styles.formWrapper}>
 			<Headline>Вход</Headline>
 			<form className={styles.form} onSubmit={submit}>
-				{loginErrorMessage && <div className={styles.error}>{loginErrorMessage}</div>}
+				{loginErrorMessage && (
+					<div className={styles.error}>{loginErrorMessage}</div>
+				)}
 				<div className={styles.wrapper}>
 					<div className={styles.input}>
 						<label className={styles.label} htmlFor="email">
@@ -51,7 +53,7 @@ export function Login() {
 						<Input type="email" name="email" id="email" placeholder="Email" />
 					</div>
 					<div className={styles.input}>
-						<label className={styles.label} htmlFor="email">
+						<label className={styles.label} htmlFor="password">
               Ваш пароль
 						</label>
 						<Input
