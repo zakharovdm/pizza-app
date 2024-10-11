@@ -10,12 +10,12 @@ import { useEffect } from 'react';
 export function Layout() {
 	const navigate = useNavigate();
 	const dispatch = useDispatch<AppDispatch>();
+	const profile = useSelector((state: RootState) => state.user.profile);
+	const items = useSelector((state: RootState) => state.cart.items);
 
 	useEffect(() => {
 		dispatch(getProfile());
 	}, [dispatch]);
-
-	const profile = useSelector((state: RootState) => state.user.profile);
 
 	const logout = () => {
 		dispatch(userActions.logout());
@@ -53,6 +53,7 @@ export function Layout() {
 						} to="/cart">
               Корзина
 						</NavLink>
+						{items.reduce((acc, item) => acc += item.count, 0)}
 					</div>
 				</div>
 				<Button type="button" className={styles.logoutButton} apperance="small" onClick={logout}>
