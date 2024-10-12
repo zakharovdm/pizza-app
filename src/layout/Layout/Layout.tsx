@@ -51,9 +51,8 @@ export function Layout() {
 						<NavLink className={({ isActive }) =>
 							cn(styles.link, { [styles.active]: isActive })
 						} to="/cart">
-              Корзина
-						</NavLink>
-						{items.reduce((acc, item) => acc += item.count, 0)}
+              Корзина <span className={styles.cartCount}>{items.reduce((acc, item) => acc += item.count, 0)}</span>
+						</NavLink>	
 					</div>
 				</div>
 				<Button type="button" className={styles.logoutButton} apperance="small" onClick={logout}>
