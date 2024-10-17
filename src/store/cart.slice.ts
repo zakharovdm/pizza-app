@@ -1,4 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { loadState } from './storage';
+
+export const CART_PERSISTENT_STATE = 'cart';
 
 export interface cartItem {
   id: number;
@@ -9,7 +12,7 @@ export interface CartState {
   items: cartItem[];
 }
 
-const initialState: CartState = {
+const initialState: CartState = loadState<CartState>(CART_PERSISTENT_STATE) ?? {
 	items: []
 };
 
@@ -18,17 +21,17 @@ export const cartSlice = createSlice({
 	initialState,
 	reducers: {
 		remove: (state, action: PayloadAction<number>) => {
-			state.items = state.items.filter(item => item.id !== action.payload);
+			state.items = state.items.filter((item) => item.id !== action.payload);
 		},
 		decrease: (state, action: PayloadAction<number>) => {
-			const existed = state.items.find(item => item.id === action.payload);
+			const existed = state.items.find((item) => item.id === action.payload);
 			if (!existed) {
 				return;
 			}
 			if (existed.count === 1) {
-				state.items = state.items.filter(item => item.id !== action.payload);
+				state.items = state.items.filter((item) => item.id !== action.payload);
 			} else {
-				state.items.map(item => {
+				state.items.map((item) => {
 					if (item.id === action.payload) {
 						item.count -= 1;
 					}
@@ -38,12 +41,12 @@ export const cartSlice = createSlice({
 			}
 		},
 		increase: (state, action: PayloadAction<number>) => {
-			const existed = state.items.find(item => item.id === action.payload);
+			const existed = state.items.find((item) => item.id === action.payload);
 			if (!existed) {
 				state.items.push({ id: action.payload, count: 1 });
 				return;
 			}
-			state.items.map(item => {
+			state.items.map((item) => {
 				if (item.id === action.payload) {
 					item.count += 1;
 				}
