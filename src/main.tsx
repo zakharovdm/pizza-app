@@ -47,7 +47,7 @@ const router = createBrowserRouter([
 					return defer({
 						data: new Promise((resolve, reject) => {
 							axios
-								.get(`${PREFIX}/productds/${params.id}`)
+								.get(`${PREFIX}/products/${params.id}`)
 								.then((data) => resolve(data)).catch(e => reject(e));
 						})
 					});
